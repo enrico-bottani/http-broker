@@ -4,10 +4,7 @@ import com.enricobottani.httpbroker.dto.GetRequest;
 import com.enricobottani.httpbroker.dto.GetResponse;
 import com.enricobottani.httpbroker.service.GetRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/2020-11/get")
@@ -17,8 +14,12 @@ public class HttpRequestController {
     public HttpRequestController(GetRequestService requestService){
         this.getRequestService = requestService;
     }
-    @GetMapping("/")
+    @PostMapping("/")
     public GetResponse sendGetRequest(@RequestBody GetRequest request) {
         return getRequestService.sendGetRequest(request);
+    }
+    @GetMapping("/echo")
+    public String echo(@RequestBody String request) {
+        return request;
     }
 }

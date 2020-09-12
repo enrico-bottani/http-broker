@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.enricobottani</groupId>
-	<artifactId>http-broker</artifactId>
+	<artifactId>oauth-proxy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>http-broker</name>
 	<description>Http broker</description>

@@ -13,7 +13,7 @@ public class GetRequestService {
         HttpURLConnection connection = null;
         try {
 
-            URL oracle = new URL("http://192.168.1.1/");
+            URL oracle = new URL(request.getUrl());
             URLConnection yc = oracle.openConnection();
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     yc.getInputStream()));
