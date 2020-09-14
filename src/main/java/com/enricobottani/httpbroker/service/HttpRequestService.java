@@ -61,7 +61,7 @@ public class HttpRequestService {
             var setCookie = SetCookie.parse(httpResponse.headers().firstValue("set-cookie").get());
             return HttpResponseDto.builder()
                     .status(httpResponse.statusCode())
-                    .setcookie(httpResponse.headers().allValues("set-cookie"))
+                    .setcookie(setCookie)
                     .raw(jsonResponse).build();
         } catch (Exception e) {
             e.printStackTrace();

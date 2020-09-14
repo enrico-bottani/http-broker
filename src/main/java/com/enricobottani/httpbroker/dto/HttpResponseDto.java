@@ -11,7 +11,7 @@ import java.util.Optional;
 public class HttpResponseDto {
     int status;
     String raw;
-    List<String> setcookie;
+    SetCookie setcookie;
 
     public String toString() {
         return String.format(
